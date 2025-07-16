@@ -1,0 +1,27 @@
+.page-transition {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  background-color: rgba(15, 23, 42, 0.6); /* 👈 Mờ đi 40% */
+  z-index: 9999;
+  animation: slide-down 0.6s cubic-bezier(1, -0.01, 0.64, 1.02) forwards;
+  pointer-events: none; /* Cho phép tương tác phía dưới nếu cần */
+}
+
+@keyframes slide-down {
+  0% {
+    top: 0;
+    opacity: 1;
+  }
+  99% {
+    top: 99%;
+    opacity: 0.5;
+  }
+  100% {
+    top: 100%;
+    opacity: 0;
+    display: none;
+  }
+}
