@@ -13,15 +13,29 @@ export const aboutPageData = {
 
   // Your Story
   briefIntro: {
-    image: "/assets/profile-pic.png", // Đường dẫn đến ảnh của bạn
-    alt: "Nguyễn Đình Lương working on a project",
-    paragraphs:
-      "Chào bạn! Tôi là Nguyễn Đình Lương, một nhà phát triển web đầy nhiệt huyết với niềm tin mãnh liệt rằng công nghệ có sức mạnh thay đổi thế giới. Hành trình của tôi bắt đầu từ sự tò mò về cách các ứng dụng web được xây dựng, và nhanh chóng phát triển thành một đam mê không ngừng nghỉ trong việc kiến tạo những giải pháp kỹ thuật số tối ưu.",
-
-    ctaButton: {
-      text: "Explore My Projects",
-      link: "/project",
-      icon: "ArrowRight",
+    personalInfo: [
+      { label: "First Name", value: "Luong" },
+      { label: "Last Name", value: "Nguyen Dinh" },
+      { label: "Birthday", value: "08/12/2004" },
+      { label: "Sex", value: "Male" },
+      { label: "Nation", value: "Viet Nam" },
+      { label: "Address", value: "Thanh Xuan, Ha Noi" },
+      { label: "Phone", value: "0977417022" },
+      { label: "Language", value: "Vietnamese, English" },
+      { label: "Git", value: "https://github.com/luong190204", isLink: true }, // Thêm cờ isLink
+      { label: "Email", value: "dinhluong19002004@gmail.com", isLink: true },
+    ],
+    //Statistic Cards
+    statisticCards: [
+      { id: 1, value: "3", label: "PERSONAL PROJECTS", unit: "+" },
+      { id: 2, value: "0", label: "YEARS OF EXPERIENCE", unit: "+" },
+      { id: 3, value: "0", label: "CLIENTS", unit: "+" },
+      { id: 4, value: "0", label: "AWARDS WON", unit: "+" },
+    ],
+    // Nút Download CV
+    downloadCvButton: {
+      text: "DOWNLOAD CV",
+      link: "/assets/your_cv.pdf",
     },
   },
 
@@ -48,7 +62,7 @@ export const aboutPageData = {
         id: 2,
         name: "Back-end & Databases",
         icon: "Server",
-        colorClass: "text-secondary",
+        colorClass: "text-success",
         items: [
           { name: "Node.js", badgeClass: "badge-primary" },
           { name: "Express.js", badgeClass: "badge-secondary" },
@@ -85,22 +99,19 @@ export const aboutPageData = {
         title: "Hanoi University of Business and Technology",
         date: "Oct 2022 - Present",
         description:
-          "Tôi hiện đang theo học ngành Công nghệ Thông tin, chuyên sâu về phát triển phần mềm và hệ thống thông tin. Trong quá trình học, tôi đã nghiên cứu và thực hành các kỹ thuật lập trình, xây dựng ứng dụng, và tối ưu hóa thuật toán. ",
+          "I am currently studying Information Technology, specializing in software development and information systems. During my studies, I have researched and practiced programming techniques, application building, and algorithm optimization.",
         icon: "GraduationCap",
-        colorClass: "text-secondary",
+        colorClass: "text-primary",
       },
-    ],
-  },
-
-  // Phần Sở thích/Cá tính (Beyond the Code)
-  interests: {
-    title: "Beyond the Code",
-    paragraph:
-      "Ngoài công việc lập trình, tôi rất thích chơi bóng đá để giữ gìn sức khỏe và tinh thần đồng đội. Tôi cũng là một người đam mê nhiếp ảnh phong cảnh, giúp tôi nhìn thế giới với một góc nhìn mới mẻ và rèn luyện sự tỉ mỉ. Việc có một cuộc sống cân bằng giúp tôi nạp năng lượng, tăng cường khả năng sáng tạo và duy trì hiệu suất cao trong công việc.",
-    icons: [
-      { name: "AcademicCapIcon", colorClass: "text-info", size: "h-10 w-10" }, // Football/Soccer
-      { name: "CameraIcon", colorClass: "text-info", size: "h-10 w-10" }, // Camera/Photography
-      { name: "BookOpenIcon", colorClass: "text-info", size: "h-10 w-10" }, // Book/Reading
+      {
+        id: 2,
+        title: "Hanoi University of Business and Technology",
+        date: "Oct 2022 - Present",
+        description:
+          "I am currently studying Information Technology, specializing in software development and information systems. During my studies, I have researched and practiced programming techniques, application building, and algorithm optimization.",
+        icon: "GraduationCap",
+        colorClass: "text-primary",
+      },
     ],
   },
 
@@ -108,19 +119,17 @@ export const aboutPageData = {
   finalCta: {
     title: "Ready to Build Something Amazing Together?",
     paragraph:
-      "Tôi luôn tìm kiếm những cơ hội mới để đóng góp và phát triển. Đừng ngần ngại liên hệ nếu bạn có dự án hoặc cơ hội nào phù hợp!",
+      "I am always looking for new opportunities to contribute and grow. Please feel free to contact me if you have a project or opportunity that fits!",
     buttons: [
       {
         text: "Explore My Projects",
-        link: "#projects",
+        link: "/projects",
         styleClass: "btn-primary",
-        icon: "BriefcaseIcon",
       },
       {
         text: "Get in Touch",
-        link: "#contact",
+        link: "/contact",
         styleClass: "btn-outline",
-        icon: "ChatBubbleBottomCenterTextIcon",
       },
     ],
   },
