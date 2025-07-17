@@ -123,7 +123,7 @@ export const aboutPageData = {
     buttons: [
       {
         text: "Explore My Projects",
-        link: "/projects",
+        link: "/project",
         styleClass: "btn-primary",
       },
       {
@@ -133,5 +133,86 @@ export const aboutPageData = {
       },
     ],
   },
+};
+
+export const projectPageData = {
+  title: "My Creative Portfolio",
+  description:
+    "Explore some of my recent work showcasing a blend of functionality, design, and modern web technologies. Each project highlights my problem-solving skills and commitment to creating impactful digital solutions.",
+  project: [
+    {
+      id: 1,
+      name: "E-commerce: FASHION HAVEN",
+      shortDescription:
+        "A full-stack e-commerce application with secure authentication, product management, shopping cart, and payment gateway integration.",
+      longDescription:
+        "Phát triển một nền tảng thương mại điện tử hoàn chỉnh, cho phép người dùng đăng ký, đăng nhập an toàn, duyệt sản phẩm theo danh mục, thêm vào giỏ hàng và thực hiện thanh toán qua Stripe. Backend được xây dựng với Node.js/Express.js, API RESTful và database MongoDB. Frontend sử dụng ReactJS kết hợp với Tailwind CSS để tạo giao diện hiện đại, responsive. Đã triển khai tính năng tìm kiếm, bộ lọc sản phẩm, quản lý đơn hàng và hệ thống đánh giá sản phẩm.",
+      technologies: [
+        "React.js",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Tailwind CSS",
+        "Redux",
+        "Stripe API",
+      ],
+      features: [
+        "User authentication (JWT)",
+        "Product catalog and filtering",
+        "Shopping cart & order management",
+        "Payment integration",
+        "Admin dashboard for product management",
+      ],
+      image: "/assets/projects/image.png",
+      screenshots: [
+        "/assets/projects/image.png",
+        "/assets/projects/image.png",
+      ],
+      demoLink: "https://fashion-haven-demo.vercel.app",
+      githubLink: "https://github.com/yourusername/fashion-haven",
+    },
+    {
+      id: 2,
+      name: "Task Management App",
+      shortDescription:
+        "A responsive web application for managing tasks, tracking progress, and collaborating with team members.",
+      longDescription:
+        "Xây dựng ứng dụng quản lý công việc với khả năng tạo, chỉnh sửa, xóa và sắp xếp công việc theo trạng thái (To-Do, In Progress, Done). Hỗ trợ tính năng gán công việc cho thành viên, đặt deadline và thêm ghi chú. Sử dụng React Context API để quản lý trạng thái, Firebase cho backend (Firestore và Authentication). Giao diện thân thiện, dễ sử dụng trên cả desktop và mobile.",
+      technologies: ["React.js", "Firebase (Firestore, Auth)", "Tailwind CSS"],
+      features: [
+        "Task creation, update, delete",
+        "Status tracking",
+        "User authentication",
+        "Real-time updates",
+        "Responsive design",
+      ],
+      image: "/assets/projects/image.png",
+      screenshots: [
+        "/assets/projects/taskflow-ss1.png",
+        "/assets/projects/taskflow-ss2.png",
+      ],
+      demoLink: "https://taskflow-demo.vercel.app",
+      githubLink: "https://github.com/yourusername/taskflow",
+    },
+    {
+      id: 3,
+      name: "Personal Blog Platform: DevLog",
+      shortDescription:
+        "A simple yet elegant blogging platform for sharing thoughts and articles with a markdown editor.",
+      longDescription:
+        "Thiết kế và triển khai một nền tảng blog cá nhân cho phép người dùng (hoặc quản trị viên) viết và xuất bản bài viết. Hỗ trợ trình soạn thảo Markdown, hiển thị bài viết nổi bật, phân loại theo tag/category. Sử dụng Next.js để tối ưu SEO và tốc độ tải trang, Contentful (hoặc headless CMS khác) làm backend cho nội dung. Giao diện tối giản, tập trung vào trải nghiệm đọc.",
+      technologies: ["Next.js", "Markdown", "Contentful CMS", "Tailwind CSS"],
+      features: [
+        "Markdown editor support",
+        "Category/tag filtering",
+        "SEO friendly",
+        "Responsive layout",
+      ],
+      image: "/assets/projects/image.png",
+      screenshots: [],
+      demoLink: "https://devlog-blog.vercel.app",
+      githubLink: "https://github.com/yourusername/devlog",
+    },
+  ],
 };
 

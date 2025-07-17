@@ -1,8 +1,12 @@
 import React from 'react'
 import { homePageData } from '../data/portfolioData'
 import "animate.css"
+import { ArrowRight } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const Homepage = () => {
+
+  const navigate = useNavigate();
 
   return (
     <div className="hero min-h-screen bg-base-200">
@@ -28,6 +32,24 @@ const Homepage = () => {
           <p className="py-4 text-lg text-base-content leading-relaxed text-justify lg:pr-20">
             {homePageData.description}
           </p>
+
+          <div className="mt-4 flex flex-row gap-8 items-center">
+            <button
+              className="btn btn-md shadow-lg btn-primary hover:shadow-xl transition-all duration-300 "
+              onClick={() => navigate("/about")}
+            >
+              <ArrowRight size={20} />
+              <span>ABOUT</span>
+            </button>
+
+            <button
+              className="btn btn-md shadow-lg btn-primary hover:shadow-xl transition-all duration-300 "
+              onClick={() => navigate("/project")}
+            >
+              <ArrowRight size={20} />
+              <span>PROJECT</span>
+            </button>
+          </div>
         </div>
       </div>
     </div>
