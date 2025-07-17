@@ -46,7 +46,7 @@ export const aboutPageData = {
       {
         id: 1,
         name: "Front-end Development",
-        icon: "SquareCode",
+        icon: "Globe",
         colorClass: "text-primary",
         items: [
           { name: "React.js", badgeClass: "badge-primary" },
@@ -61,7 +61,7 @@ export const aboutPageData = {
       {
         id: 2,
         name: "Back-end & Databases",
-        icon: "Server",
+        icon: "Database",
         colorClass: "text-success",
         items: [
           { name: "Node.js", badgeClass: "badge-primary" },
@@ -75,7 +75,7 @@ export const aboutPageData = {
       {
         id: 3,
         name: "Soft Skills & Tools",
-        icon: "WrenchScrewdriverIcon",
+        icon: "Wrench",
         colorClass: "text-accent",
         items: [
           { name: "Problem-Solving", badgeClass: "badge-outline" },
@@ -136,7 +136,7 @@ export const aboutPageData = {
 };
 
 export const projectPageData = {
-  title: "My Creative Portfolio",
+  title: "My Projects",
   description:
     "Explore some of my recent work showcasing a blend of functionality, design, and modern web technologies. Each project highlights my problem-solving skills and commitment to creating impactful digital solutions.",
   project: [
@@ -216,3 +216,13 @@ export const projectPageData = {
   ],
 };
 
+export const contactPageData = {
+  title: "Get In Touch",
+  description:
+    "Thank you for reading to the end. I hope that you have learned a little about me through this site. If you have any comments about this site or me, please use the form.",
+
+  address: "Ha Noi",
+  email: "dinhluong19002004@gmail.com",
+  phone: "0977417022"
+
+};

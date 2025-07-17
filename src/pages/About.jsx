@@ -1,16 +1,21 @@
 import React, { useEffect, useState } from "react";
 import { aboutPageData } from "../data/portfolioData";
 import "animate.css"
-import { ArrowDown, BookOpen, Camera, Component, GraduationCap, Square, SquareCode } from "lucide-react";
+import { ArrowDown, BookOpen, Camera, Component, GraduationCap, Square, SquareCode, Globe, Database, Wrench } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
+const IconMap = {
+  Globe,
+  Database,
+  Wrench
+}
 const About = () => {
 
   const navigate = useNavigate(); 
 
   const {  title, briefIntro, skills, journey, interests, finalCta } = aboutPageData;
   return (
-    <section className="py-16 md:py-24 bg-base-200 text-base-content">
+    <div className="py-16 md:py-24 bg-base-200 text-base-content">
       <div className="container mx-auto px-4">
         <div className="text-center animate__animated animate__fadeInUp">
           <h2 className="text-4xl lg:text-5xl font-extrabold ">{title}</h2>
@@ -92,7 +97,9 @@ const About = () => {
             <h3 className="">{skills.title}</h3>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8 lg:pr-28">
-              {skills.categories.map((category, index) => (
+              {skills.categories.map((category, index) => {
+                const IconComponent = IconMap[category.icon];
+                return (
                 <div
                   key={category.id}
                   className={`card bg-base-100 shadow-xl p-8 transform transition-transform duration-300 hover:-translate-y-2 animate__animated
@@ -108,9 +115,10 @@ const About = () => {
                   <h4
                     className={`card-title text-base-content mb-6 text-2xl font-semibold border-b pb-3 border-base-content/20 ${category.colorClass}`}
                   >
-                    <SquareCode
+                    {/* <SquareCode
                       className={`h-8 w-8 mr-3 ${category.colorClass}`}
-                    />
+                    /> */}
+                    {IconComponent && <IconComponent className={`h-8 w-8 mr-3 ${category.colorClass}`} />}
                     {category.name}
                   </h4>
                   <div className="flex flex-wrap gap-3 font-normal ">
@@ -124,7 +132,8 @@ const About = () => {
                     ))}
                   </div>
                 </div>
-              ))}
+                )
+              })}
             </div>
           </div>
         </div>
@@ -197,7 +206,7 @@ const About = () => {
         </div>
         
       </div>
-    </section>
+    </div>
   );
 };
 

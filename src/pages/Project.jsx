@@ -29,7 +29,7 @@ const Project = () => {
                 <img
                   src={project.image}
                   alt={project.name}
-                  class="object-cover w-full h-full"
+                  className="object-cover w-full h-full"
                 />
               </figure>
               <div className="card-body justify-end">
@@ -121,9 +121,8 @@ const Project = () => {
                   )}
                 </div>
 
-                {/* Cột phải: Chi tiết dự án */}
+                {/* Right */}
                 <div className="p-8 flex flex-col overflow-y-auto">
-                  {" "}
                   {/* Thêm overflow-y-auto để cuộn nếu nội dung dài */}
                   <h3 className="font-bold text-3xl mb-4">
                     {selectedProject.name}
@@ -139,8 +138,7 @@ const Project = () => {
                     {selectedProject.longDescription}
                   </p>
                   {/* Technologies Used */}
-                  {selectedProject.technologies &&
-                    selectedProject.technologies.length > 0 && (
+                  {selectedProject.technologies?.length > 0 && (
                       <div className="mb-6">
                         <h4 className="text-xl font-semibold mb-2">
                           Technologies Used:
