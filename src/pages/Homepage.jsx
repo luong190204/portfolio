@@ -9,7 +9,7 @@ const Homepage = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="hero min-h-screen bg-base-200">
+    <div className="hero pb-18 min-h-screen bg-base-200">
       <div className="hero-content flex-col lg:flex-row">
         {/* Image */}
         <div className="w-full lg:w-1/3 flex justify-center lg:mr-10 lg:justify-end lg:-translate-y-16">
