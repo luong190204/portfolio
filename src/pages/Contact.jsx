@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react'
 import { contactPageData } from '../data/portfolioData'
-import { Contact2, Facebook, Github, Mail, MapPinned, Send } from 'lucide-react';
+import { Contact2, Facebook, Github, Mail, MapPinned, Phone, Send } from 'lucide-react';
 
 import emailjs from "@emailjs/browser";
 const Contact = () => {
@@ -90,7 +90,7 @@ const Contact = () => {
 
             <div className="flex items-center gap-4 my-10">
               <div className="rounded-full flex items-center justify-center text-primary-content font-medium">
-                <Contact2 className="w-10 h-10 text-base-content" />
+                <Phone className="w-10 h-10 text-base-content" />
               </div>
               <div>
                 <h3 className="font-medium">Phone</h3>
@@ -114,22 +114,19 @@ const Contact = () => {
               <a
                 href="#"
                 className="w-12 h-12 flex items-center justify-center rounded-lg 
-                text-gray-700 dark:text-gray-200 
-                bg-gray-200 dark:bg-white/10 
-                hover:bg-purple-100 dark:hover:bg-white/20 
-                hover:text-blue-600 dark:hover:text-blue-400 
-                
-                transition-all duration-300 hover:scale-110 shadow-md"
+                   text-base-200 
+                   bg-primary
+                   hover:bg-primary/70 hover:text-base-100 
+                   transition-all duration-300 hover:scale-110 shadow-md"
               >
                 <Facebook className="w-6 h-6" />
               </a>
               <a
                 href="#"
                 className="w-12 h-12 flex items-center justify-center rounded-lg 
-                text-gray-700 dark:text-gray-200 
-                bg-gray-200 dark:bg-white/10 
-                hover:bg-purple-100 dark:hover:bg-white/20 
-                hover:text-purple-600 dark:hover:text-purple-400 
+                text-base-200 
+                bg-purple-600 
+                hover:text-base-100 hover:bg-purple-400 
                 transition-all duration-300 hover:scale-110 shadow-md"
               >
                 <Github className="w-6 h-6" />
@@ -138,10 +135,9 @@ const Contact = () => {
               <a
                 href="#"
                 className="w-12 h-12 flex items-center justify-center rounded-lg 
-                text-gray-700 dark:text-gray-200 
-                bg-gray-200 dark:bg-white/10 
-                hover:bg-purple-100 dark:hover:bg-white/20 
-                hover:text-red-600 dark:hover:text-red-400  
+                text-base-200 
+                bg-red-600
+                hover:bg-red-400 hover:text-base-100
                 transition-all duration-300 hover:scale-110 shadow-md"
               >
                 <Mail className="w-6 h-6" />
@@ -150,7 +146,7 @@ const Contact = () => {
           </div>
 
           {/* Right - Form */}
-          <div className="md:basis-2/3 bg-white/5 rounded-2xl p-8 shadow-2xl lg:mr-20 ">
+          <div className="md:basis-2/3 bg-white/5 rounded-2xl p-8 shadow-2xl lg:mr-28 ">
             <form ref={formRef} onSubmit={sendEmail} className="space-y-6">
               <div className="grid lg:grid-cols-2 gap-6">
                 <div>

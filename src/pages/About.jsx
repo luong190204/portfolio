@@ -15,9 +15,9 @@ const About = () => {
 
   const {  title, briefIntro, skills, journey, interests, finalCta } = aboutPageData;
   return (
-    <div className="py-16 md:py-24 bg-base-200 text-base-content">
+    <div className="py-24 md:py-24 bg-base-200 text-base-content">
       <div className="container mx-auto px-4">
-        <div className="text-center animate__animated animate__fadeInUp">
+        <div className=" text-center animate__animated animate__fadeInUp">
           <h2 className="text-4xl lg:text-5xl font-extrabold ">{title}</h2>
         </div>
 
@@ -140,7 +140,7 @@ const About = () => {
 
         {/* My Journey & Education */}
         <div className="flex flex-col lg:flex-row gap-8 justify-center items-center">
-          <div className="my-10">
+          <div className="my-1">
             <div className="text-3xl text-center font-extrabold lg:text-4xl my-10 animate__animated animate__fadeInUp">
               <h3>{journey.title}</h3>
             </div>
@@ -182,7 +182,7 @@ const About = () => {
         </div>
 
         {/* Final CTA */}
-        <div className="text-center mt-16 animate__animated animate__fadeInUp animate__delay-1s">
+        <div className="text-center mt-8 animate__animated animate__fadeInUp animate__delay-1s">
           <h3 className="text-3xl lg:text-4xl font-bold text-base-content mb-8">
             {finalCta.title}
           </h3>

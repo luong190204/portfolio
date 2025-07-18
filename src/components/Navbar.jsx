@@ -30,33 +30,30 @@ const Navbar = () => {
         <PageTransitionOverlay onFinish={() => setShowTransition(false)} />
       )}
 
-      {/* Theme Toggle */}
-      <div className="relative flex flex-col items-center justify-center">
-        <button
-          onClick={toggleTheme}
-          className="absolute right-1 pt-1.5 top-4 lg:right-14 lg:top-6 cursor-pointer z-50"
-        >
-          {theme === "light" ? (
-            <Moon className="w-6 h-6" />
-          ) : (
-            <Sun className="w-6 h-6" />
-          )}
-        </button>
-      </div>
+      {/* Theme Toggle - luôn nằm góc trên phải */}
+      <button
+        onClick={toggleTheme}
+        className="fixed top-6 right-6 lg:top-8 lg:right-14 z-50 cursor-pointer"
+      >
+        {theme === "light" ? (
+          <Moon className="w-6 h-6" />
+        ) : (
+          <Sun className="w-6 h-6" />
+        )}
+      </button>
 
       {/* Navbar */}
       <nav
         className="fixed inset-x-0 top-0 p-2 shadow-lg 
-                flex justify-center  
-                lg:top-1/2 lg:right-4 lg:inset-x-auto lg:translate-y-[-50%] lg:flex-col lg:rounded-box z-20"
+              flex justify-center  
+              lg:top-1/2 lg:right-4 lg:inset-x-auto lg:translate-y-[-50%] lg:flex-col lg:rounded-box z-20"
       >
         <ul className="menu flex flex-row gap-10 lg:flex-col lg:gap-4 lg:space-y-10 bg-base-100 rounded-box">
           {navLinks.map((link) => (
             <li key={link.id}>
               <button
                 onClick={() => handleNavigate(link.path)}
-                className="flex flex-col items-center justify-center p-2 tooltip tooltip-bottom "
-                data-tip={link.label}
+                className="flex flex-col items-center justify-center p-2 "
               >
                 <link.icon className="w-6 h-6 text-base-content" />
                 <span className="hidden lg:inline-block text-sm">
@@ -69,6 +66,7 @@ const Navbar = () => {
       </nav>
     </div>
   );
+
 };
 
 export default Navbar;

@@ -50,7 +50,6 @@ export const aboutPageData = {
         colorClass: "text-primary",
         items: [
           { name: "React.js", badgeClass: "badge-primary" },
-          { name: "Next.js", badgeClass: "badge-secondary" },
           { name: "Tailwind CSS", badgeClass: "badge-accent" },
           { name: "DaisyUI", badgeClass: "badge-info" },
           { name: "JavaScript (ES6+)", badgeClass: "badge-success" },
@@ -64,10 +63,11 @@ export const aboutPageData = {
         icon: "Database",
         colorClass: "text-success",
         items: [
+          { name: "SpringBoot", badgeClass: "badge-accent" },
           { name: "Node.js", badgeClass: "badge-primary" },
           { name: "Express.js", badgeClass: "badge-secondary" },
-          { name: "MongoDB", badgeClass: "badge-accent" },
-          { name: "PostgreSQL", badgeClass: "badge-info" },
+          { name: "MySQL", badgeClass: "badge-info" },
+          { name: "MongoDB", badgeClass: "badge-error" },
           { name: "RESTful APIs", badgeClass: "badge-success" },
           { name: "Authentication", badgeClass: "badge-warning" },
         ],
@@ -96,15 +96,6 @@ export const aboutPageData = {
     timelineEvents: [
       {
         id: 1,
-        title: "Hanoi University of Business and Technology",
-        date: "Oct 2022 - Present",
-        description:
-          "I am currently studying Information Technology, specializing in software development and information systems. During my studies, I have researched and practiced programming techniques, application building, and algorithm optimization.",
-        icon: "GraduationCap",
-        colorClass: "text-primary",
-      },
-      {
-        id: 2,
         title: "Hanoi University of Business and Technology",
         date: "Oct 2022 - Present",
         description:
@@ -142,77 +133,38 @@ export const projectPageData = {
   project: [
     {
       id: 1,
-      name: "E-commerce: FASHION HAVEN",
+      name: "Real-time Chat Application (MERN Stack)",
       shortDescription:
-        "A full-stack e-commerce application with secure authentication, product management, shopping cart, and payment gateway integration.",
-      longDescription:
-        "Phát triển một nền tảng thương mại điện tử hoàn chỉnh, cho phép người dùng đăng ký, đăng nhập an toàn, duyệt sản phẩm theo danh mục, thêm vào giỏ hàng và thực hiện thanh toán qua Stripe. Backend được xây dựng với Node.js/Express.js, API RESTful và database MongoDB. Frontend sử dụng ReactJS kết hợp với Tailwind CSS để tạo giao diện hiện đại, responsive. Đã triển khai tính năng tìm kiếm, bộ lọc sản phẩm, quản lý đơn hàng và hệ thống đánh giá sản phẩm.",
+        "A full-stack real-time chat application built with the MERN stack, featuring user authentication, online presence tracking, and instant messaging using Socket.io. The UI is designed with TailwindCSS and DaisyUI for a modern experience.",
+      longDescription: `This is a full-stack real-time chat application developed using the MERN stack (MongoDB, Express.js, React.js, Node.js). It features user authentication and authorization with JWT, allowing users to securely log in and manage sessions. Real-time messaging is handled through Socket.io, enabling instant communication between users and displaying online/offline status. 
+        The frontend is styled with TailwindCSS and enhanced using DaisyUI for a clean, responsive interface. The entire application is deployed on Render, with both frontend and backend integrated into a single server. This project demonstrates my understanding of full-stack development, WebSocket communication, authentication flows, and responsive UI design.
+        `,
       technologies: [
         "React.js",
         "Node.js",
         "Express.js",
         "MongoDB",
         "Tailwind CSS",
-        "Redux",
-        "Stripe API",
+        "DaisyUI",
       ],
       features: [
-        "User authentication (JWT)",
-        "Product catalog and filtering",
-        "Shopping cart & order management",
-        "Payment integration",
-        "Admin dashboard for product management",
+        "Build real-time chat application with React and Node.js",
+        "Integrate Socket.io, display online status, send real-time messages",
+        "Authenticate users with JWT",
+        "Design interface with TailwindCSS + DaisyUI",
       ],
-      image: "/assets/projects/image.png",
+      image: "/assets/projects/chatapp.png",
       screenshots: [
-        "/assets/projects/image.png",
-        "/assets/projects/image.png",
+        "/assets/projects/chatapp_sigup.png",
+        "/assets/projects/chatapp_login.png",
+        "/assets/projects/chatapp_chat.png",
+        "/assets/projects/chatapp_profile.png",
+        "/assets/projects/chatapp_theme.png",
       ],
-      demoLink: "https://fashion-haven-demo.vercel.app",
-      githubLink: "https://github.com/yourusername/fashion-haven",
+      demoLink: "https://fullstack-chat-app-2j3s.onrender.com",
+      githubLink: "https://github.com/luong190204/fullstack-chat-app",
     },
-    {
-      id: 2,
-      name: "Task Management App",
-      shortDescription:
-        "A responsive web application for managing tasks, tracking progress, and collaborating with team members.",
-      longDescription:
-        "Xây dựng ứng dụng quản lý công việc với khả năng tạo, chỉnh sửa, xóa và sắp xếp công việc theo trạng thái (To-Do, In Progress, Done). Hỗ trợ tính năng gán công việc cho thành viên, đặt deadline và thêm ghi chú. Sử dụng React Context API để quản lý trạng thái, Firebase cho backend (Firestore và Authentication). Giao diện thân thiện, dễ sử dụng trên cả desktop và mobile.",
-      technologies: ["React.js", "Firebase (Firestore, Auth)", "Tailwind CSS"],
-      features: [
-        "Task creation, update, delete",
-        "Status tracking",
-        "User authentication",
-        "Real-time updates",
-        "Responsive design",
-      ],
-      image: "/assets/projects/image.png",
-      screenshots: [
-        "/assets/projects/taskflow-ss1.png",
-        "/assets/projects/taskflow-ss2.png",
-      ],
-      demoLink: "https://taskflow-demo.vercel.app",
-      githubLink: "https://github.com/yourusername/taskflow",
-    },
-    {
-      id: 3,
-      name: "Personal Blog Platform: DevLog",
-      shortDescription:
-        "A simple yet elegant blogging platform for sharing thoughts and articles with a markdown editor.",
-      longDescription:
-        "Thiết kế và triển khai một nền tảng blog cá nhân cho phép người dùng (hoặc quản trị viên) viết và xuất bản bài viết. Hỗ trợ trình soạn thảo Markdown, hiển thị bài viết nổi bật, phân loại theo tag/category. Sử dụng Next.js để tối ưu SEO và tốc độ tải trang, Contentful (hoặc headless CMS khác) làm backend cho nội dung. Giao diện tối giản, tập trung vào trải nghiệm đọc.",
-      technologies: ["Next.js", "Markdown", "Contentful CMS", "Tailwind CSS"],
-      features: [
-        "Markdown editor support",
-        "Category/tag filtering",
-        "SEO friendly",
-        "Responsive layout",
-      ],
-      image: "/assets/projects/image.png",
-      screenshots: [],
-      demoLink: "https://devlog-blog.vercel.app",
-      githubLink: "https://github.com/yourusername/devlog",
-    },
+    
   ],
 };
 

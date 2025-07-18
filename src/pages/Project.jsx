@@ -33,10 +33,9 @@ const Project = () => {
                 />
               </figure>
               <div className="card-body justify-end">
-                <h3 className="card-title text-2xl text-white font-bold">
+                <h3 className="card-title text-2xl text-white font-bold pb-24">
                   {project.name}
                 </h3>
-                <p className="text-gray-200">{project.shortDescription}</p>
                 <div className="card-actions justify-end mt-4">
                   <button className="btn btn-primary btn-sm">
                     View Details

@@ -23,10 +23,10 @@ const Homepage = () => {
 
         {/* profile */}
         <div className="text-center lg:text-left lg:w-2/3 lg:pr-8 ">
-          <h4 className="text-3xl text-primary font-semibold mb-2 animate__animated animate__fadeInDown">
+          <h4 className="text-5xl text-primary font-semibold mb-2 animate__animated animate__fadeInDown">
             I'm {homePageData.name}
           </h4>
-          <h1 className="text-5xl font-bold text-base-content mb-4">
+          <h1 className="text-4xl font-bold text-base-content mb-4">
             {homePageData.title}
           </h1>
           <p className="py-4 text-lg text-base-content leading-relaxed text-justify lg:pr-20">
