@@ -3,6 +3,7 @@ import { contactPageData } from '../data/portfolioData'
 import { Contact2, Facebook, Github, Mail, MapPinned, Phone, Send } from 'lucide-react';
 
 import emailjs from "@emailjs/browser";
+import toast from 'react-hot-toast';
 const Contact = () => {
 
   const formRef = useRef()
@@ -22,13 +23,38 @@ const Contact = () => {
     }));
   };
 
+  // Validate form
+  const validateForm = () => {
+    if (!formData.name.trim()) {
+      toast.error("Name is required");
+      return false;
+    }
+    if (!formData.email.trim()) {
+      toast.error("Email is required");
+      return false;
+    }
+    if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      toast.error("Invalid email format");
+      return false;
+    }
+    if (!formData.subject.trim()) {
+      toast.error("Subject is required");
+      return false;
+    }
+    if (!formData.message.trim()) {
+      toast.error("Message is required");
+      return false;
+    }
+
+    return true;
+  };
+
+
   const sendEmail = async (e) => {
     e.preventDefault();
 
-    if (!formData.name || !formData.email || !formData.subject || !formData.message) {
-      alert("Please fill in all fields");
-    return;
-    }
+    if (!validateForm()) return;
+
     console.log(formData);
     emailjs
       .sendForm(
@@ -40,8 +66,7 @@ const Contact = () => {
       .then (
         (result) => {
           console.log("SUCCESS!", result.text);
-          alert("Message sent successfully!");
-
+          toast.success("Message sent successfully!");
           // Reset form sau khi gửi
           setFormData({
             name: "",
@@ -54,15 +79,15 @@ const Contact = () => {
         },
         (error) => {
           console.log("FAILED...", error.text);
-          alert("Something went wrong.");
+          toast.error("Something went wrong.");
         }
       )
   }
 
   return (
-    <div className="py-24 md:py-24 bg-base-200 text-base-content">
+    <div className="py-24 md:py-16 bg-base-200 text-base-content">
       <div className="container mx-auto">
-        <div className="text-center">
+        <div className="text-center mb-8">
           <h2 className="text-4xl lg:text-5xl font-extrabold">
             {contactPageData.title}
           </h2>

@@ -15,7 +15,7 @@ const About = () => {
 
   const {  title, briefIntro, skills, journey, interests, finalCta } = aboutPageData;
   return (
-    <div className="py-24 md:py-24 bg-base-200 text-base-content overflow-hidden min-h-screen overflow-y-scroll scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-transparent">
+    <div className="py-24 md:py-16 bg-base-200 text-base-content overflow-hidden min-h-screen overflow-y-scroll scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-transparent">
       <div className="container mx-auto px-4">
         <div className=" text-center animate__animated animate__fadeInUp">
           <h2 className="text-4xl lg:text-5xl font-extrabold ">{title}</h2>

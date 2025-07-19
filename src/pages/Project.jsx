@@ -7,7 +7,7 @@ const Project = () => {
   const [selectedProject, setSelectProject] = useState(null);
 
   return (
-    <div className="py-24 md:py-24 bg-base-100 text-base-content">
+    <div className="py-24 md:py-16 bg-base-100 text-base-content">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl lg:text-5xl font-extrabold text-center mb-6 animate__animated animate__fadeInUp">
           {title}
@@ -138,22 +138,22 @@ const Project = () => {
                   </p>
                   {/* Technologies Used */}
                   {selectedProject.technologies?.length > 0 && (
-                      <div className="mb-6">
-                        <h4 className="text-xl font-semibold mb-2">
-                          Technologies Used:
-                        </h4>
-                        <div className="flex flex-wrap gap-2">
-                          {selectedProject.technologies.map((tech, index) => (
-                            <div
-                              key={index}
-                              className="badge badge-lg badge-outline badge-primary"
-                            >
-                              {tech}
-                            </div>
-                          ))}
-                        </div>
+                    <div className="mb-6">
+                      <h4 className="text-xl font-semibold mb-2">
+                        Technologies Used:
+                      </h4>
+                      <div className="flex flex-wrap gap-2">
+                        {selectedProject.technologies.map((tech, index) => (
+                          <div
+                            key={index}
+                            className="badge badge-lg badge-outline badge-primary"
+                          >
+                            {tech}
+                          </div>
+                        ))}
                       </div>
-                    )}
+                    </div>
+                  )}
                   {/* Key Features */}
                   {selectedProject.features &&
                     selectedProject.features.length > 0 && (

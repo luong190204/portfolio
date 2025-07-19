@@ -6,6 +6,7 @@ import Project from "./pages/Project";
 import Contact from "./pages/Contact";
 import Navbar from "./components/Navbar";
 import { useThemeStore } from "./store/useThemeStore";
+import { Toaster } from "react-hot-toast";
 
 const App = () =>  {
 
@@ -21,6 +22,8 @@ const App = () =>  {
         <Route path="/project" element={<Project />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
+
+      <Toaster />
     </div>
   );
 }

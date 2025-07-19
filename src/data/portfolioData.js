@@ -35,7 +35,7 @@ export const aboutPageData = {
     // Nút Download CV
     downloadCvButton: {
       text: "DOWNLOAD CV",
-      link: "/assets/your_cv.pdf",
+      link: "/assets/CV.pdf",
     },
   },
 
