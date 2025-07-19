@@ -7,7 +7,7 @@ const Project = () => {
   const [selectedProject, setSelectProject] = useState(null);
 
   return (
-    <div className="py-16 md:py-24 bg-base-100 text-base-content">
+    <div className="py-24 md:py-24 bg-base-100 text-base-content">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl lg:text-5xl font-extrabold text-center mb-6 animate__animated animate__fadeInUp">
           {title}

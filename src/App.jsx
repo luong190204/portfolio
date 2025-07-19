@@ -10,7 +10,7 @@ import { useThemeStore } from "./store/useThemeStore";
 const App = () =>  {
 
   const { theme } = useThemeStore();
-
+  
   return (
     <div data-theme={theme} className="min-h-screen">
       <Navbar />

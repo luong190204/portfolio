@@ -15,7 +15,7 @@ const About = () => {
 
   const {  title, briefIntro, skills, journey, interests, finalCta } = aboutPageData;
   return (
-    <div className="py-24 md:py-24 bg-base-200 text-base-content">
+    <div className="py-24 md:py-24 bg-base-200 text-base-content overflow-hidden min-h-screen overflow-y-scroll scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-transparent">
       <div className="container mx-auto px-4">
         <div className=" text-center animate__animated animate__fadeInUp">
           <h2 className="text-4xl lg:text-5xl font-extrabold ">{title}</h2>
@@ -100,9 +100,9 @@ const About = () => {
               {skills.categories.map((category, index) => {
                 const IconComponent = IconMap[category.icon];
                 return (
-                <div
-                  key={category.id}
-                  className={`card bg-base-100 shadow-xl p-8 transform transition-transform duration-300 hover:-translate-y-2 animate__animated
+                  <div
+                    key={category.id}
+                    className={`card bg-base-100 shadow-xl p-8 transform transition-transform duration-300 hover:-translate-y-2 animate__animated
                         ${
                           index === 0
                             ? "animate__fadeInLeft"
@@ -111,28 +111,32 @@ const About = () => {
                             : "animate__fadeInRight"
                         }
                       `}
-                >
-                  <h4
-                    className={`card-title text-base-content mb-6 text-2xl font-semibold border-b pb-3 border-base-content/20 ${category.colorClass}`}
                   >
-                    {/* <SquareCode
+                    <h4
+                      className={`card-title text-base-content mb-6 text-2xl font-semibold border-b pb-3 border-base-content/20 ${category.colorClass}`}
+                    >
+                      {/* <SquareCode
                       className={`h-8 w-8 mr-3 ${category.colorClass}`}
                     /> */}
-                    {IconComponent && <IconComponent className={`h-8 w-8 mr-3 ${category.colorClass}`} />}
-                    {category.name}
-                  </h4>
-                  <div className="flex flex-wrap gap-3 font-normal ">
-                    {category.items.map((item, index) => (
-                      <div
-                        key={index}
-                        className={`badge badge-lg ${item.badgeClass} transform transition-transform duration-300 hover:-translate-y-1`}
-                      >
-                        {item.name}
-                      </div>
-                    ))}
+                      {IconComponent && (
+                        <IconComponent
+                          className={`h-8 w-8 mr-3 ${category.colorClass}`}
+                        />
+                      )}
+                      {category.name}
+                    </h4>
+                    <div className="flex flex-wrap gap-3 font-normal ">
+                      {category.items.map((item, index) => (
+                        <div
+                          key={index}
+                          className={`badge badge-lg ${item.badgeClass} transform transition-transform duration-300 hover:-translate-y-1`}
+                        >
+                          {item.name}
+                        </div>
+                      ))}
+                    </div>
                   </div>
-                </div>
-                )
+                );
               })}
             </div>
           </div>
@@ -200,11 +204,8 @@ const About = () => {
                 </button>
               );
             })}
-
-            
           </div>
         </div>
-        
       </div>
     </div>
   );

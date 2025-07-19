@@ -33,7 +33,7 @@ const Homepage = () => {
             {homePageData.description}
           </p>
 
-          <div className="mt-4 flex flex-row gap-8 items-center">
+          <div className="mt-4 mb-6 flex flex-row gap-8 items-center">
             <button
               className="btn btn-md shadow-lg btn-primary hover:shadow-xl transition-all duration-300 "
               onClick={() => navigate("/about")}
